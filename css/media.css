@@ -1,4 +1,226 @@
+/* ====================== MEDIA QUERIES ====================== */
+
+/* TABLET (768px і менше) */
 @media (max-width: 768px) {
+  .header-container {
+    padding: 1rem 4vw;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+
+  .hero-line {
+    width: 300px;
+  }
+
+  .about-content {
+    gap: 20px;
+  }
+
+  .about-text {
+    flex: 1 1 100%;
+  }
+
+  .about-image {
+    flex: 0 0 250px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .service-card {
+    min-height: 300px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .footer-contacts a {
+    padding: 0 6px;
+    font-size: 0.85rem;
+  }
+
+  .modal-overlay {
+    align-items: center;
+  }
+
+  .modal {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 16px;
+  }
+}
+
+/* МОБІЛЬ (480px і менше) */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.8rem 3vw;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .logo span {
+    font-size: 0.9rem;
+  }
+
+  .nav {
+    gap: 0.5rem;
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 0.7rem;
+  }
+
+  .header-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    height: 500px;
+    margin-top: 60px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0 4vw;
+  }
+
+  .hero-title {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+  }
+
+  .hero-line {
+    width: 200px;
+    height: 3px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .about {
+    padding: 40px 15px;
+  }
+
+  .about-content {
+    gap: 15px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .about-image {
+    flex: 0 0 200px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    padding: 20px 15px 25px;
+    min-height: auto;
+  }
+
+  .service-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .service-card h3 {
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+  }
+
+  .portfolio {
+    padding: 40px 15px;
+  }
+
+  .portfolio-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .gallery a {
+    aspect-ratio: 1 / 1;
+  }
+
+  .footer {
+    padding: 12px 15px;
+    gap: 7px;
+  }
+
+  .footer .container {
+    gap: 7px;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .footer-contacts a {
+    padding: 0 5px;
+    font-size: 0.8rem;
+  }
+
+  .footer-copy {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+
+  /* Modal адаптив */
   .modal-overlay {
     align-items: flex-end;
   }
@@ -9,6 +231,487 @@
     border-radius: 16px 16px 0 0;
     padding: 24px 20px 30px;
     animation: slideUp 0.35s ease;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .modal-description {
+    font-size: 13px;
+  }
+
+  .modal-details {
+    font-size: 12px;
+  }
+}
+
+/* ДУЖЕ МАЛІ ЕКРАНИ (320px і менше) */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer-contacts a {
+    font-size: 0.75rem;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+  .hero-line {
+    width: 200px;
+    height: 3px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .about {
+    padding: 40px 15px;
+  }
+
+  .about-content {
+    gap: 15px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .about-image {
+    flex: 0 0 200px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    padding: 20px 15px 25px;
+    min-height: auto;
+  }
+
+  .service-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .service-card h3 {
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+  }
+
+  .portfolio {
+    padding: 40px 15px;
+  }
+
+  .portfolio-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .gallery a {
+    aspect-ratio: 1 / 1;
+  }
+
+  .footer {
+    padding: 12px 15px;
+    gap: 7px;
+  }
+
+  .footer .container {
+    gap: 7px;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .footer-contacts a {
+    padding: 0 5px;
+    font-size: 0.8rem;
+  }
+
+  .footer-copy {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+
+  /* Modal адаптив */
+  .modal {
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .modal-description {
+    font-size: 13px;
+  }
+
+  .modal-details {
+    font-size: 12px;
+  }
+}
+
+/* ДУЖЕ МАЛІ ЕКРАНИ (320px і менше) */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer-contacts a {
+    font-size: 0.75rem;
+  }
+}
+/* TABLET (768px і менше) */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem 4vw;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+
+  .hero-line {
+    width: 300px;
+  }
+
+  .about-content {
+    gap: 20px;
+  }
+
+  .about-text {
+    flex: 1 1 100%;
+  }
+
+  .about-image {
+    flex: 0 0 250px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .service-card {
+    min-height: 300px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .footer-contacts a {
+    padding: 0 6px;
+    font-size: 0.85rem;
+  }
+
+  .modal-overlay {
+    align-items: center;
+  }
+
+  .modal {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 16px;
+  }
+}
+
+/* МОБІЛЬ (480px і менше) */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.8rem 3vw;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .logo span {
+    font-size: 0.9rem;
+  }
+
+  .nav {
+    gap: 0.5rem;
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 0.7rem;
+  }
+
+  .header-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    height: 500px;
+    margin-top: 60px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0 4vw;
+  }
+
+  .hero-title {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+  }
+
+  .hero-line {
+    width: 200px;
+    height: 3px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .about {
+    padding: 40px 15px;
+  }
+
+  .about-content {
+    gap: 15px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .about-image {
+    flex: 0 0 200px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    padding: 20px 15px 25px;
+    min-height: auto;
+  }
+
+  .service-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .service-card h3 {
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+  }
+
+  .portfolio {
+    padding: 40px 15px;
+  }
+
+  .portfolio-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .gallery a {
+    aspect-ratio: 1 / 1;
+  }
+
+  .footer {
+    padding: 12px 15px;
+    gap: 7px;
+  }
+
+  .footer .container {
+    gap: 7px;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .footer-contacts a {
+    padding: 0 5px;
+    font-size: 0.8rem;
+  }
+
+  .footer-copy {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+
+  /* Modal адаптив */
+  .modal-overlay {
+    align-items: flex-end;
+  }
+
+  .modal {
+    width: 100%;
+    max-width: none;
+    border-radius: 16px 16px 0 0;
+    padding: 24px 20px 30px;
+    animation: slideUp 0.35s ease;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .modal-description {
+    font-size: 13px;
+  }
+
+  .modal-details {
+    font-size: 12px;
+  }
+}
+
+/* ДУЖЕ МАЛІ ЕКРАНИ (320px і менше) */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer-contacts a {
+    font-size: 0.75rem;
   }
 }
 
