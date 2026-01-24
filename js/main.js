@@ -79,3 +79,43 @@ document.addEventListener("keydown", (e) => {
     closeModal();
   }
 });
+
+// --------------SCROLL------------------
+// ====================== NAVIGATION ACTIVE LINE ======================
+
+const navLinks = document.querySelectorAll(".nav a");
+const sections = document.querySelectorAll("section");
+
+// Плавний скрол при кліку
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute("href").slice(1);
+    const targetSection = document.getElementById(targetId);
+    if (!targetSection) return;
+
+    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+// Функція для визначення активної секції
+function updateActiveLink() {
+  let scrollPos = window.scrollY + window.innerHeight / 3; // беремо верх/середину вікна
+
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    const id = section.getAttribute("id");
+
+    if (scrollPos >= top && scrollPos < bottom) {
+      navLinks.forEach((link) => link.classList.remove("active"));
+      const activeLink = document.querySelector(`.nav a[href="#${id}"]`);
+      if (activeLink) activeLink.classList.add("active");
+    }
+  });
+}
+
+// Оновлюємо під час скролу
+window.addEventListener("scroll", updateActiveLink);
+// Щоб підкреслення з'явилось відразу
+updateActiveLink();
