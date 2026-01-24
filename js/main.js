@@ -1,6 +1,30 @@
 window.addEventListener("load", function () {
   baguetteBox.run(".gallery");
+  renderServiceCards();
 });
+
+// ---------------------------RENDER SERVICE CARDS---------------------------
+
+function renderServiceCards() {
+  document.querySelectorAll(".service-card").forEach((card) => {
+    const service = services.find((s) => s.id === card.dataset.id);
+    if (!service) return;
+
+    card.querySelector("h3").textContent = service.title;
+    card.querySelector("p").textContent = service.description;
+
+    const iconEl = card.querySelector(".service-icon");
+    if (iconEl) {
+      const img = document.createElement("img");
+      img.src = service.icon;
+      img.alt = service.alt;
+      img.loading = service.loading;
+
+      img.classList.add("icon");
+      iconEl.appendChild(img);
+    }
+  });
+}
 
 // ---------------------------MODAL---------------------------
 

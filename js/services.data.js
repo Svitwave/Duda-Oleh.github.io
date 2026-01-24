@@ -57,21 +57,21 @@ const services = [
 ];
 
 // Рендер карточок
-document.querySelectorAll(".service-card").forEach((card) => {
-  const service = services.find((s) => s.id === card.dataset.id);
-  if (!service) return;
+// document.querySelectorAll(".service-card").forEach((card) => {
+//   const service = services.find((s) => s.id === card.dataset.id);
+//   if (!service) return;
 
-  card.querySelector("h3").textContent = service.title;
-  card.querySelector("p").textContent = service.description;
+//   card.querySelector("h3").textContent = service.title;
+//   card.querySelector("p").textContent = service.description;
 
-  const iconEl = card.querySelector(".service-icon");
-  if (iconEl) {
-    const img = document.createElement("img");
-    img.src = service.icon;
-    img.alt = service.alt;
-    img.loading = service.loading;
+//   const iconEl = card.querySelector(".service-icon");
+//   if (iconEl) {
+//     const img = document.createElement("img");
+//     img.src = service.icon;
+//     img.alt = service.alt;
+//     img.loading = service.loading;
 
-    img.classList.add("icon");
-    iconEl.appendChild(img);
-  }
-});
+//     img.classList.add("icon");
+//     iconEl.appendChild(img);
+//   }
+// });
