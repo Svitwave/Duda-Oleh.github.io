@@ -19,12 +19,21 @@ body {
 }
 
 /* HEADER */
-.header {
+/* .header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
   background: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(163, 154, 154, 0.381);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -32,7 +41,9 @@ body {
 .header-container {
   max-width: 1200px;
   margin: auto;
-  padding: 1rem 6vw;
+  /* padding: 1rem 6vw; */
+  /* padding: 10px 64px; */
+  padding: 10px 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,10 +55,21 @@ body {
   padding-right: 15px;
 }
 
-.logo strong {
+/* .logo strong {
   font-weight: 800;
   letter-spacing: 1px;
   color: var(--yellow);
+} */
+
+.logo {
+  margin-bottom: 0px;
+}
+
+.logo img {
+  width: 60px; /* ⬅️ ключовий момент */
+  height: 60px;
+  object-fit: contain;
+  display: block;
 }
 
 .nav {
